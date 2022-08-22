@@ -4,6 +4,7 @@ system('cls')
 import discord, asyncio
 from function import add_message
 from discord_components import DiscordComponents, Button, ButtonStyle
+import os
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
@@ -41,5 +42,6 @@ async def on_member_remove(member):
     embed.set_thumbnail(url=url)
     embed.set_footer(text=f"감자 Bot", icon_url=member.avatar_url) #수정이 필요합니다 '서버' 텍스트를 변경해주세요
     await client.get_channel(1011221300171255909).send(content=member.mention, embed=embed) #수정이 필요합니다 get_channel() 괄호안에 채널 아이디를 적어주세요! 수정하셨다면 맨 앞에 '#'만 지워주세요!
-
-client.run("MTAxMTIyMjM5MTMzNjIyMjgxMg.GZLHMK.JDcJvO4a2H5pIfitcAtBMIvHSnm1YabgEZUcJ8")
+    
+access_token = os.environ["BOT_TOKEN"
+client.run(access_token)
